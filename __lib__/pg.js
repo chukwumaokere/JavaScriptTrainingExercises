@@ -36,7 +36,7 @@ class Client {
     /**
      * This runs a given query and returns the result as JSON. A valid connection must be made before 
      * @param {string} query 
-     * @returns {object | object[]} results
+     * @returns {Promise<object | object[]>} results
      */
     async query(query) {
         return new Promise((resolve, reject) => {

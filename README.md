@@ -1,5 +1,6 @@
-# How to use this project
+# READ. EVERYTHING. CAREFULLY.
 
+# How to use this project
 There will be a bunch of folders that have various tests categories. In them will be an `index.js` file that has some horribly written JavaScript.  
 
 Your job is to fix them so that they run per the specification  within the JavaScript file without modifying the areas that say `DO NOT TOUCH THESE`  
@@ -22,7 +23,7 @@ Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid
 If you give up, every file has a `solution/index.js` file that has the working code.
 
 ## Warning
-DO NOT TOUCH ANY OF THE FILES IN `__lib__` or `__tests__`. These are designed to make this project work. If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
+**DO NOT TOUCH ANY OF THE FILES** IN `__lib__` or `__tests__`. These are designed to make this project work. If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
 You should NOT need to `import` or `require` any other files or `npm install` anything other that what is currently in the project.
 
 ## Updates
@@ -37,7 +38,6 @@ The code has everything you need if you're inquisitive enough. Try using the Int
 The only "hint" I'll give you is try to fix any of the runtime errors first, so that when you run the file, no fatal errors get thrown. That'll give you a good enough starting point to start coding.
 
 # Happy Coding
-# READ. EVERYTHING. CAREFULLY.
 
 ### Disclaimer
 I coded these over a weekend for fun to help a friend out. There might be errors in my implementation. These are mocks of things that exist from what I remember of them so there might not be every possible implementation or configuration option for things like Express. The goal is to help people learn how to write things and feel comfortable fixing syntax issues and writing code. Not to be a perfect sandbox for writing every possible type of endpoint or variation of some implementation.   

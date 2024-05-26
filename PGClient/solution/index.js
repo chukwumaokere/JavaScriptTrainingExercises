@@ -30,7 +30,21 @@ async function getBookByID(id) {
     }   
 }
 
+async function getPerfectBooks() {
+    const client = new Client({connectionString: 'fakeconnection'});
+    try {
+        await client.connect();
+        const res = await client.query(`SELECT * FROM books WHERE rating = 5`);
+        return res;
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await client.end();
+    }
+}
 
+// Fix these
+// Extra credit, get them to run properly and log the results
 getAllBooks().then(result => {
     console.log(result);
 }).catch(error => {
@@ -43,9 +57,16 @@ getBookByID(3).then(result => {
     console.error('Unhandled error:', error);
 });
 
+getPerfectBooks().then(result => {
+    console.log(result);
+}).catch(error => {
+    console.error('Unhandled error:', error);
+});
+
 // DO NOT TOUCH THESE
 module.exports = {
     getAllBooks,
-    getBookByID
+    getBookByID,
+    getPerfectBooks,
 }
 // DO NOT TOUCH THESE

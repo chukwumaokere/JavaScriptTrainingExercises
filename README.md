@@ -29,4 +29,19 @@ You should NOT need to `import` or `require` any other files or `npm install` an
 
 This project may occasionally update. To pull the latest, just do `git pull`. If you have uncommitted changes locally, you could commit them and then do `git pull --rebase` to keep your code changes to the `index.js` files
 
+
+## Hints
+There are no hints. If you want to challenge yourself, do NOT google this or reference other code or notes. Try to use just what is given to you.   
+The code has everything you need if you're inquisitive enough. Try using the Intellisense to make sense of what you have at your disposal.
+
+The only "hint" I'll give you is try to fix any of the runtime errors first, so that when you run the file, no fatal errors get thrown. That'll give you a good enough starting point to start coding.
+
 # Happy Coding
+# READ. EVERYTHING. CAREFULLY.
+
+### Disclaimer
+I coded these over a weekend for fun to help a friend out. There might be errors in my implementation. These are mocks of things that exist from what I remember of them so there might not be every possible implementation or configuration option for things like Express. The goal is to help people learn how to write things and feel comfortable fixing syntax issues and writing code. Not to be a perfect sandbox for writing every possible type of endpoint or variation of some implementation.   
+
+If there are issues, please open an Issue here in github and I'll try to take care of it. No promises.  
+
+Things are subject to change

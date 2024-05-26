@@ -55,12 +55,17 @@ class Client {
             }
 
             if (query.toLowerCase().includes('where')) {
-                const regex = /WHERE\s+id\s*=\s*(\d+)/i;
-                const match = query.match(regex);
+                const regexForColumnValue = /WHERE\s+(\w+)\s*=\s*(\d+)/i;
+                const match = query.match(regexForColumnValue);
+                const column = match[1];
+                const value = parseInt(match[2], 10);
                 if (match) {
-                    const id = parseInt(match[1], 10);
-                    const book = books.find((item) => item.id === id) || [];
-                    result = book;
+                    const items = books.map((item) => item[column] === value ? item : undefined).filter(item => item) || [];
+                    if (column === 'id') {
+                        result = items[0];
+                    } else {
+                        result = items;
+                    }
                 }
             } else {
                 result = books;

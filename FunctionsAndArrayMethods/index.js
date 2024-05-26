@@ -5,16 +5,19 @@
 const arr_ = [10, 20, 30];
 // DO NOT TOUCH THIS
 
+// KEEP THIS AS A REGULAR FUNCTIOn, JUST MAKE IT WORK
 function reverseArray { 
     return arr.reverse();
 }
 
+// KEEP THIS AS AN ARROW FUNCTION, JUST MAKE IT WORK
 const doubledArray = (arr) => {
     arr.map(() => { 
         item * 2
     });
 }
 
+// KEEP THIS AS AN ARROW FUNCTION, JUST MAKE IT WORK
 const function lessThan20 (arr) => {
     return arr.filter((item) => item > 20)
 }

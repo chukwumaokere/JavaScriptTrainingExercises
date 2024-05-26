@@ -22,9 +22,9 @@ const function lessThan20 (arr) => {
     return arr.filter((item) => item > 20)
 }
 
-reverseArray(arr_);
-doubledArray(arr_);
-lessThan20(arr_);
+console.log(reverseArray(arr_));
+console.log(doubledArray(arr_));
+console.log(lessThan20(arr_));
 
 module.exports = {
     reverseArray,

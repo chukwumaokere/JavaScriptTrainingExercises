@@ -2,6 +2,7 @@
 const { Client } = require ('../__lib__/utils');
 // DO NOT TOUCH THIS
 
+// Testing your ability to use the postgres `pg` npm package
 // Use the Client above to run a query that returns all the books from the `books` table
 // Use the client above to run a query that returns a book given a specific book ID
 

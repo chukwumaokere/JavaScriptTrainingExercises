@@ -16,7 +16,7 @@ class Client {
     #connected = false;
     
     /**
-     * This establishes a connection to the database at connectionString
+     * This establishes a connection to the database at the provided connection `options` or `connectionString`
      */
     async connect() {
         return new Promise((res, rej) => {

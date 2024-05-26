@@ -3,6 +3,7 @@ const { Client } = require ('../__lib__/utils');
 // DO NOT TOUCH THIS
 
 // Use the Client above to run a query that returns all the books from the `books` table
+// Use the client above to run a query that returns a book given a specific book ID
 
 async function getAllBooks() {
     const client = new Client();

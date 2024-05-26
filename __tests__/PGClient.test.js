@@ -1,5 +1,5 @@
 const { getAllBooks, getBookByID } = require('../PGClient');
-const { books } = require('../lib/data');
+const { books } = require('../__lib__/data');
 
 describe('queries are set up correctly', () =>{
     test('getAllBooks returns all books', async () => {

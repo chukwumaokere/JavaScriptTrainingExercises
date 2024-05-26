@@ -1,5 +1,5 @@
 // DO NOT TOUCH THIS
-const { Client } = require ('../../lib/utils');
+const { Client } = require ('../../__lib__/utils');
 // DO NOT TOUCH THIS
 
 // Use the Client above to run a query that returns all the books from the `books` table

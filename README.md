@@ -21,4 +21,9 @@ Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid
 ## Solutions
 If you give up, every file has a `solution/index.js` file that has the working code.
 
+## Warning
+DO NOT TOUCH ANY OF THE FILES IN `__lib__` or `__tests__`. These are designed to make this project work. If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
+You should NOT need to `import` or `require` any other files or `npm install` anything other that what is currently in the project.
+
+
 # Happy Coding

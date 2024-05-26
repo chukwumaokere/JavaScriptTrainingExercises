@@ -13,7 +13,7 @@ Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid
 3) Start coding and fixing.
 
 ## How to run tests
-- You can either run `npm test TestName` to run a specific test once. a
+- You can either run `npm test TestName` to run a specific test once.
 - - Example: `npm test SomePassingTest`
 - You can run it indefinitely so it can watch for your updates with `npm run test:watch TestName`. 
 - - Example: `npm run test:watch SomePassingTest`
@@ -23,7 +23,8 @@ Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid
 If you give up, every file has a `solution/index.js` file that has the working code.
 
 ## Warning
-**DO NOT TOUCH ANY OF THE FILES** IN `__lib__` or `__tests__`. These are designed to make this project work. If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
+**DO NOT TOUCH ANY OF THE FILES** IN `__lib__` or `__tests__`. These are designed to make this project work.  
+If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
 You should NOT need to `import` or `require` any other files or `npm install` anything other that what is currently in the project.
 
 ## Updates
@@ -33,6 +34,7 @@ This project may occasionally update. To pull the latest, just do `git pull`. If
 
 ## Hints
 There are no hints. If you want to challenge yourself, do NOT google this or reference other code or notes. Try to use just what is given to you.   
+  
 The code has everything you need if you're inquisitive enough. Try using the Intellisense to make sense of what you have at your disposal.
 
 The only "hint" I'll give you is try to fix any of the runtime errors first, so that when you run the file, no fatal errors get thrown. That'll give you a good enough starting point to start coding.

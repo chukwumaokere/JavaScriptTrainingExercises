@@ -24,7 +24,9 @@ If you give up, every file has a `solution/index.js` file that has the working c
 
 ## Warning
 **DO NOT TOUCH ANY OF THE FILES** IN `__lib__` or `__tests__`. These are designed to make this project work.  
+
 If you break it, you will need to re-`clone` this project or do `git reset --hard HEAD __lib__` and `git reset --hard HEAD __tests__` and start over again.  
+
 You should NOT need to `import` or `require` any other files or `npm install` anything other that what is currently in the project.
 
 ## Updates

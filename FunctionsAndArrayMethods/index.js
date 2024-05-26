@@ -1,5 +1,5 @@
 // Fix this file so that the 3 functions work and the tests pass
-// Hint: Run `npm test:watch FunctionsAndArrayMethods`
+// Hint: Run `npm run test:watch FunctionsAndArrayMethods`
 
 // DO NOT TOUCH THIS
 const arr_ = [10, 20, 30];

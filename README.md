@@ -14,8 +14,8 @@ Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid
 ## How to run tests
 - You can either run `npm test TestName` to run a specific test once. a
 - - Example: `npm test SomePassingTest`
-- You can run it indefinitely so it can watch for your updates with `npm test:watch TestName`. 
-- - Example: `npm test:watch SomePassingTest`
+- You can run it indefinitely so it can watch for your updates with `npm run test:watch TestName`. 
+- - Example: `npm run test:watch SomePassingTest`
 - You can run all tests by running `npm test`. Only use this after you've finished all the instructions otherwise you'll see too many errors.
 
 ## Solutions

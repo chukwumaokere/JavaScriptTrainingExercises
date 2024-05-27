@@ -7,7 +7,9 @@ Your job is to fix them so that they run per the specification  within the JavaS
 
 Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid. Then make it so that the tests pass.   
 
-This project runs better in [VSCode](https://code.visualstudio.com/) so I highly recommend you use that IDE for working on this project.
+This project runs better in [VSCode](https://code.visualstudio.com/) so I highly recommend you use that IDE for working on this project.  
+
+`node_modules` is hidden to ignore distractions, but if you ran `npm install` you can rest assured that it will install the necessary files.
 
 ## Setup
 1) Run `npm install` to install all necessary items.  

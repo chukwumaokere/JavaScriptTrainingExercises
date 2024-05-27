@@ -1,4 +1,4 @@
-//API Docs: https://dummyjson.com/docs/users 
+// API Docs: https://dummyjson.com/docs/users 
 // Fix these 3 functions so that the 2 function calls at the bottom of the file run and log appropriately
 
 function getAndLogUserFromUserInput() {

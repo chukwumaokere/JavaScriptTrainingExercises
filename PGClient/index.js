@@ -43,11 +43,12 @@ getBookByID(3).then( => {
     console.error('Unhandled error:', error);
 });
 
-getPerfectBooks().then().catch();
+getPerfectBooks()?
 
 // DO NOT TOUCH THESE
 module.exports = {
     getAllBooks,
-    getBookByID
+    getBookByID,
+    getPerfectBooks,
 }
 // DO NOT TOUCH THESE

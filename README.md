@@ -5,7 +5,9 @@ There will be a bunch of folders that have various tests categories. In them wil
 
 Your job is to fix them so that they run per the specification  within the JavaScript file without modifying the areas that say `DO NOT TOUCH THESE`  
 
-Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid. Then make it so that the tests pass.  
+Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid. Then make it so that the tests pass.   
+
+This project runs better in [VSCode](https://code.visualstudio.com/) so I highly recommend you use that IDE for working on this project.
 
 ## Setup
 1) Run `npm install` to install all necessary items.  

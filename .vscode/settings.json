@@ -1,0 +1,28 @@
+{
+    // Exclude directories or files from IntelliSense
+    "files.exclude": {
+        "**/__lib__/**": true,
+        "**/__tests__/**": true,
+    },
+    // Exclude directories or files from search
+    "search.exclude": {
+      "**/__lib__/**": true,
+      "**/__tests__/**": true,
+    },
+    // Exclude directories or files from file watching
+    "files.watcherExclude": {
+      "**/__lib__/**": true,
+      "**/__tests__/**": true,
+    },
+    "javascript.files.exclude": [
+        "**/__lib__/**",
+        "**/__tests__/**",
+    ],
+    // Exclude directories or files from IntelliSense and validation
+    "typescript.tsserver.exclude": [
+      "**/__lib__/**"
+    ],
+    "javascript.implicitProjectConfig.excludedFiles": [
+      "**/__lib__/**"
+    ]
+}

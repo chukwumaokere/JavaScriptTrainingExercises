@@ -7,6 +7,8 @@ Your job is to fix them so that they run per the specification  within the JavaS
 
 Run the files like: `node AsyncAwait/index.js` to ensure the JavaScript is valid. Then make it so that the tests pass.   
 
+Make sure all relevant functions are exported. I will not export every function for you but the test WILL look to import it. If its not properly exported, the tests will fail. Learn how to export.    
+
 This project runs better in [VSCode](https://code.visualstudio.com/) so I highly recommend you use that IDE for working on this project.  
 
 `node_modules` is hidden to ignore distractions, but if you ran `npm install` you can rest assured that it will install the necessary files.

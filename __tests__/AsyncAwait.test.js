@@ -1,4 +1,6 @@
-const { getAndLogUserFromUserInput, fetchUser, fetchTopXUsers } = require('../AsyncAwait');
+const { safeImport, safeCall } = require('../__lib__/utils');
+
+const { getAndLogUserFromUserInput, fetchUser, fetchTopXUsers } = safeImport('../AsyncAwait');
 
 const userOne = {
   "id": 1,
@@ -96,7 +98,7 @@ describe('should pass all tests', () => {
       fetchSpy.mockResolvedValue({
           json: jest.fn().mockResolvedValue(userOne),
       });
-      await getAndLogUserFromUserInput(1);
+      await safeCall(getAndLogUserFromUserInput, 1);
       expect(logSpy).toHaveBeenCalledWith(userOne);
     });
 
@@ -105,7 +107,7 @@ describe('should pass all tests', () => {
           json: jest.fn().mockResolvedValue(userOne),
       });
 
-      const fetchUserResult = await fetchUser(1);
+      const fetchUserResult = await safeCall(fetchUser, 1);
       expect(fetchSpy).toHaveBeenCalledWith('http://dummyjson.com/users/1');
       expect(fetchUserResult).toEqual(userOne);
     });
@@ -115,7 +117,7 @@ describe('should pass all tests', () => {
           json: jest.fn().mockResolvedValue(top5Users),
       });
 
-      await fetchTopXUsers(5);
+      await safeCall(fetchTopXUsers, 5);
       expect(fetchSpy).toHaveBeenCalledWith('http://dummyjson.com/users?limit=5&order=asc');
       expect(console.log).toHaveBeenCalledWith(top5Users)
     });

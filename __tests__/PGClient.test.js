@@ -3,7 +3,7 @@ const { safeImport, safeCall } = require('../__lib__/utils');
 const { getAllBooks, getBookByID, getPerfectBooks } = safeImport('../PGClient');
 const { books } = require('../__lib__/data');
 
-describe('queries are set up correctly', () =>{
+describe('All Tests Should Pass - queries are set up correctly', () =>{
     test('getAllBooks returns all books', async () => {
         const result = await safeCall(getAllBooks);
         expect(result).toEqual(books)

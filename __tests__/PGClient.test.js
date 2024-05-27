@@ -1,6 +1,6 @@
 const { safeImport, safeCall } = require('../__lib__/utils');
 
-const { getAllBooks, getBookByID, getPerfectBooks } = safeImport('../PGClient');
+const { getAllBooks, getBookByID, getPerfectBooks, getBooksByName } = safeImport('../PGClient');
 const { books } = require('../__lib__/data');
 
 describe('All Tests Should Pass - queries are set up correctly', () =>{
@@ -28,5 +28,31 @@ describe('All Tests Should Pass - queries are set up correctly', () =>{
                 return item;
             }}).filter(item => item);
         expect(result).toEqual(perfectBooks)
+    })
+
+    test('getBooksByName returns ONE books that have that name', async () => {
+        const result = await safeCall(getBooksByName, 'Pride & Prejudice');
+        let booksByName = books.map(item => {
+            if (item.name === 'Pride & Prejudice') {
+                return item;
+            }}).filter(item => item);
+
+        if (booksByName.length === 1) {
+            booksByName = booksByName[0];
+        }
+        expect(result).toEqual(booksByName)
+    })
+
+    test('getBooksByName returns ALL books that have that name', async () => {
+        const result = await safeCall(getBooksByName, 'The Hobbit');
+        let booksByName = books.map(item => {
+            if (item.name === 'The Hobbit') {
+                return item;
+            }}).filter(item => item);
+
+            if (booksByName.length === 1) {
+                booksByName = booksByName[0];
+            }
+        expect(result).toEqual(booksByName)
     })
 })

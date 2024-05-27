@@ -1,4 +1,4 @@
-const { books } = require('./data');
+const { books, uniqueSelectors } = require('./data');
 
 class Client {
     /**
@@ -55,17 +55,33 @@ class Client {
             }
 
             if (query.toLowerCase().includes('where')) {
-                const regexForColumnValue = /WHERE\s+(\w+)\s*=\s*(\d+)/i;
+                const regexForColumnValue = /WHERE\s+(\w+)\s*=\s*(\d+|'[^']*')/i;
                 const match = query.match(regexForColumnValue);
                 const column = match[1];
-                const value = parseInt(match[2], 10);
-                if (match) {
-                    const items = books.map((item) => item[column] === value ? item : undefined).filter(item => item) || [];
-                    if (column === 'id') {
-                        result = items[0];
-                    } else {
-                        result = items;
+                let value = match[2];
+                if (typeof (books[0][column]) === 'number') {
+                    value = parseInt(match[2], 10)
+                } else {
+                    // Must be a string column they're looking to select on
+                    if (!value.includes(`'`)) {
+                        return reject(`Error no column ${value} on relation ${table}.`)
                     }
+                    value = value.replaceAll(`'`, '');
+                }
+                
+                if (!match) {
+                    return reject (`Something went wrong. Please check your query and try again.`);
+                }
+                if (!(column in books[0])) {
+                    return reject(`Column "${column}" does not exist on table "${table}".`)
+                }
+
+                const items = books.map((item) => item[column] === value ? item : undefined).filter(item => item) || [];
+                
+                if (uniqueSelectors.includes(column)) {
+                    result = items[0];
+                } else {
+                    result = items;
                 }
             } else {
                 result = books;

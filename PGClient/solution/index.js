@@ -6,6 +6,8 @@ const { Client } = require ('../../__lib__/utils');
 // getAllBooks - Use the Client above to run a query that returns all the books from the `books` table
 // getBookByID - Use the client above to run a query that returns a book from the `books` table given a specific book ID
 // getPerfectBooks - Use the client above to run a query that returns all the books from the `books` table that have a rating of 5
+// getBooksByName - Use the client above to run a query that returns books from the `books` table given a books title. AND IF THERE IS ONLY 1 BOOK, return just the one.
+
 
 async function getAllBooks() {
     const client = new Client({connectionString: 'fakeconnection'});
@@ -46,6 +48,22 @@ async function getPerfectBooks() {
     }
 }
 
+async function getBooksByName(name) { 
+    const client = new Client({connectionString: 'fakeconnection'});
+    try {
+        await client.connect();
+        let res = await client.query(`SELECT * FROM books WHERE name = '${name}'`);
+        if (res.length === 1) {
+            res = res[0];
+        }
+        return res;
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await client.end();
+    }
+}
+
 // Fix these
 // Extra credit, get them to run properly and log the results
 getAllBooks().then(result => {
@@ -66,10 +84,17 @@ getPerfectBooks().then(result => {
     console.error('Unhandled error:', error);
 });
 
+getBooksByName('The Hobbit').then(result => {
+    console.log(result);
+}).catch(error => {
+    console.error('Unhandled error:', error);
+})
+
 // DO NOT TOUCH THESE
 module.exports = {
     getAllBooks,
     getBookByID,
     getPerfectBooks,
+    getBooksByName
 }
 // DO NOT TOUCH THESE

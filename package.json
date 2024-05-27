@@ -8,7 +8,9 @@
     "test:watch": "jest --watch"
   },
   "jest": {
-    "testMatch": ["**/__tests__/*.test.(mjs|js)"]
+    "testMatch": [
+      "**/__tests__/*.test.(mjs|js)"
+    ]
   },
   "author": "",
   "license": "ISC",
